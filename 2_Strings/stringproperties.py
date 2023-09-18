@@ -1,6 +1,7 @@
 #Immutability
 name = 'Hello World'
 print("Hey! " + name)
+print(f'number of characters in "{name}" are {len(name)}')
 
 #name[0] = 'P' -- doesn't work
 last_letters: str = name[1:]
