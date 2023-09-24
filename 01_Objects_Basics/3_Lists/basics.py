@@ -40,3 +40,6 @@ my_int_list.sort()
 print(my_int_list)
 my_int_list.reverse()
 print(my_int_list)
+
+my_new_list = [1]*5
+print(my_new_list)
