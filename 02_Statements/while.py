@@ -5,10 +5,12 @@ while x < 5:
 else:
     print(f'while loop terminated. The current value of x is {x}')
 
-x = [1,2,3]
+x = [1, 2, 3]
 
 for item in x:
-    #comment alone would not work
+    # comment alone would not work under a loop statement,
+    # we can use pass if we don't want to do anything e.g. on a temporary basis
+
     pass
 
 mystring = 'Sachin'
