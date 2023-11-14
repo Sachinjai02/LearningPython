@@ -34,7 +34,7 @@ for enumTuple in enumerate(word):
 
 #tuple unpacking
 for indx, letter in enumerate(word):
-    print(f'index of letter {word[indx]} is {indx}')
+    print(f'index of letter {word[indx]}/{letter} is {indx}')
 
 ## opposite of enumerate -> zip
 mylist1 = [1, 2, 3, 4, 5, 6]
@@ -56,8 +56,8 @@ print( 'k1' in {'k1':'true'})
 print( 'k1' in {'k1':'true'}.keys())
 print (345 in {'h1':345}.values())
 
-print(1=='1')
-print(1==1.0)
+print(f' check if 1== "1" {1=="1"}')
+print(f' check if 1== 1.0 {1==1.0}')
 
 # min, max function in list
 print(min(['x','y','z']))
