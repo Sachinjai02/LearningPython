@@ -26,3 +26,9 @@ print(mylist)
 #list comprehension with nested for loops
 mylist = [x*y for x in [1, 2, 3] for y in [1, 10, 1000]]
 print(mylist)
+
+mylist.insert(1,12)
+
+print(mylist)
+
+help(mylist.insert)
