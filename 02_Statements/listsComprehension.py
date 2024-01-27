@@ -32,3 +32,19 @@ mylist.insert(1,12)
 print(mylist)
 
 help(mylist.insert)
+
+
+print([l for l in "Sachin"])
+print([x for x in range(1,11, 2)])
+print([x*2 for x in range(1,11) if x % 2 == 0])
+print([m for m in zip(range(1,10), range(0,9))])
+
+st = "Print only the words that start with s in this sentence"
+words = st.split(" ")
+for word in words:
+    if len(word)%2 == 0:
+        print(word)
+
+
+print([s[0] for s in words])
+print([l for l in range(1, 51) if l % 3 == 0])

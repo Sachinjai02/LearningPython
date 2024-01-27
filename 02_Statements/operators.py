@@ -12,7 +12,7 @@ for num in range(4, 10):
 for num in range(2, 11, 2):
     print(num)
 
-# this just returns the range operator
+# this just returns the range operator - its a generator function
 print(range(2, 11, 2))
 
 # to  get a list from range we will need to cast it to list explicitly
@@ -51,6 +51,8 @@ print(list(zip(mylist1, mylist2)))
 print('x' in ['x', 'y', 'z'])
 print( (1, 2) in [(1, 2), (3, 4), (2, 1)])
 print ('a' in 'Sachin')
+print('String comparison with in')
+print('sac' in 'sachin')
 
 print( 'k1' in {'k1':'true'})
 print( 'k1' in {'k1':'true'}.keys())

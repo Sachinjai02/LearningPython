@@ -17,3 +17,7 @@ print(1 > 4 or 5 == 5.0)
 
 print (not True)
 print (not 1 == 1)
+
+print("H>C is {res}".format(res = ("H" > "C")))
+
+print(not (100 == 100 and 78 < 90))
