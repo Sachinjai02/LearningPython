@@ -9,13 +9,11 @@ work_hours = [('Abby', 100), ('Billy', 500), ('Cassie', 800)]
 
 
 def employee_check(work_hours):
-    max_hours = 0
-    employee_name = ''
-    for emp_name, hours in work_hours:
-        if max_hours < hours:
-            max_hours = hours
-            employee_name = emp_name
-    return (employee_name, max_hours)
+    emp = ('', 0)
+    for current_emp in work_hours:
+        if emp[1] < current_emp[1]:
+            emp = current_emp
+    return emp
 
 
 print(f'Employee of the month {employee_check(work_hours)}')

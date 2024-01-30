@@ -23,4 +23,4 @@ def check_guess(list, guess):
 cups = [' ', ' ', 'O']
 shuffle_list(cups)
 guess = player_guess()
-check_guess(cups, guess)
+check_guess(2, guess)

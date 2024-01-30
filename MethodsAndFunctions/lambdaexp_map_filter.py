@@ -36,5 +36,5 @@ def cube(n):
 cube = lambda num: num ** 3
 cube(5)
 
-print(list(map(lambda n: n**3, list_nums)))
+print(list(map(lambda n, n2=89: n*n2, list_nums)))
 print(list(filter(lambda n: n%2 == 0, list_nums)))
