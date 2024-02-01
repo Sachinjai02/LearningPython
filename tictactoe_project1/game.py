@@ -7,7 +7,7 @@ def print_board(board):
         print('|')
 
 def get_user_choice(row_column, range_low, range_high):
-    r = ' '
+    r = 'invalid'
     while not r.isdigit() or (r.isdigit() and not int(r) in range(range_low,range_high+1)):
         r = input(f"Enter {row_column} ")
         if not r.isdigit() or (r.isdigit() and not int(r) in range(range_low,range_high+1)):
@@ -30,16 +30,48 @@ def check_win_draw(board, player):
     for r in range(0, size):
         for c in range (0, size):
             if board[r][c] != '-':
-                filled = filled+1
+                filled += 1
 
-    if filled != size ** 2:
+    if filled == size ** 2:
         print("The game results in a draw!")
         return False
 
     ## Check for horizontal wins
+    for i in range(0, size):
+        count = 0
+        for j in range(0, size):
+            if board[i][j] == player[1]:
+                count += 1
+        if count == size:
+            print(f'{player[0]} won')
+            return False
 
-    ## check for diagonal wins
     ## check for vertical wins
+    for j in range(0, size):
+        count = 0
+        for i in range(0, size):
+            if board[i][j] == player[1]:
+                count+=1
+        if count == size:
+            print(f'{player[0]} won')
+            return False
+
+    ##check for clock diagonals
+    count = 0
+    for i in range (0, size):
+        if board[i][size - 1 - i] == player[1]:
+            count += 1
+    if count == size:
+        print(f'{player[0]} won')
+        return False
+
+    count = 0
+    for i in range (0, size):
+        if board[i][i] == player[1]:
+            count += 1
+    if count == size:
+        print(f'{player[0]} won')
+        return False
 
     return True
 
@@ -64,7 +96,7 @@ def game():
         print_board(board)
 
 
-        game_status = check_win_draw(board,players[player_turn][0])
+        game_status = check_win_draw(board,players[player_turn])
 
         player_turn = (player_turn + 1) % 2
 
